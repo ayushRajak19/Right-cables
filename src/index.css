@@ -1,0 +1,9 @@
+
+/* Optional custom global styles (NO !important) */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+
+  color: #111827; /* dark gray text */
+}
