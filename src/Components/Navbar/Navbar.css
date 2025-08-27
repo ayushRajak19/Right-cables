@@ -23,7 +23,6 @@ body.nav-open {
 }
 
 /* ========= Transparent Navbar ========= */
-/* ========= Transparent Navbar ========= */
 .navbar {
   position: fixed;
   top: 0;
@@ -33,8 +32,7 @@ body.nav-open {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
- z-index: 1000;
-z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
+  z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
 }
 
 /* ========= Container ========= */
@@ -45,10 +43,9 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
   height: 100%;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0 1rem;   /* keeps space left/right */
+  padding: 0 1rem;
   width: 100%;       /* ✅ makes sure hamburger isn’t cut off */
 }
-
 
 /* ========= Logo Button ========= */
 .navbar-logo {
@@ -75,8 +72,6 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
   top: var(--nav-height);
   left: 0;
   right:0;
-  
-
   display: flex;
   align-items: center;
   list-style: none;
@@ -110,7 +105,7 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
 /* Hover Effects for buttons and links */
 .navbar-links button:hover,
 .navbar-links a:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
+  background: rgba(209, 77, 77, 0.1) !important;
   color: #ffffff !important;
 }
 
@@ -352,9 +347,7 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
   cursor: pointer;
   transition: var(--transition);
   padding: 0;
-
-  /* ✅ ensure it's always visible */
-  margin-right: 10px;   /* add breathing room from right edge */
+  margin-right: 10px;   /* ✅ breathing room from right edge */
   z-index: 2001;        /* above video + hero */
 }
 
@@ -400,7 +393,7 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
     left: 0;
     right: 0;
     flex-direction: column;
-    background: #111827 !important; /* 🔥 dark background for clarity */
+    background: #111827 !important;
     padding: 1.5rem;
     gap: 0.5rem;
     opacity: 0;
@@ -417,7 +410,7 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
 
   .navbar-links button,
   .navbar-links a {
-    color: #fff !important; /* 🔥 make all text white */
+    color: #fff !important;
     padding: 1rem !important;
     border-radius: 8px !important;
     background: transparent !important;
@@ -437,7 +430,7 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
     opacity: 1 !important;
     visibility: visible !important;
     box-shadow: none !important;
-    background: #1f2937 !important; /* 🔥 dark dropdown */
+    background: #1f2937 !important;
     margin: 0.5rem 0 0 0 !important;
     transform: none !important;
   }
@@ -454,31 +447,6 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
     background: var(--accent) !important;
     color: #fff !important;
   }
-
-  /* Fix Contact Us button in mobile */
-/* Special Contact Us button styling */
-/* Override only the Contact Us button */
-.navbar-links .contact-li .btn.contact-btn {
-  background: #2563eb !important;   /* 🔵 Blue */
-  color: #ffffff !important;
-  border-radius: 999px !important;
-  font-weight: 600 !important;
-  padding: 0.75rem 1.5rem !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
-}
-
-.navbar-links .contact-li .btn.contact-btn:hover {
-  background: #1d4ed8 !important;   /* darker blue */
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
-}
-
-.navbar-links .contact-li .btn.contact-btn:active {
-  transform: translateY(0) !important;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
-}
-
 
   .products-dropdown {
     min-width: 100% !important;
@@ -516,4 +484,33 @@ z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
   .navbar-logo img {
     height: 38px;
   }
+}
+
+/* ========= FINAL FIX: CONTACT US ========= */
+.navbar-links li.contact-li .btn.contact-btn {
+  background: #f44336 !important;   /* Blue pill */
+  color: #ffffff !important;
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  padding: 0.75rem 1.5rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+  text-decoration: none !important;
+}
+
+.navbar-links li.contact-li .btn.contact-btn::after {
+  content: none !important;
+  display: none !important;
+  background: none !important;
+}
+
+.navbar-links li.contact-li .btn.contact-btn:hover {
+  background: red!important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.navbar-links li.contact-li .btn.contact-btn:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
