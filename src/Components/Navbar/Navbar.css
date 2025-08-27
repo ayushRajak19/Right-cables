@@ -15,12 +15,14 @@ html, body {
   margin: 0;
   padding: 0 !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
 }
 
 body.nav-open {
   overflow: hidden;
 }
 
+/* ========= Transparent Navbar ========= */
 /* ========= Transparent Navbar ========= */
 .navbar {
   position: fixed;
@@ -31,7 +33,8 @@ body.nav-open {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-  z-index: 1000;
+ z-index: 1000;
+z-index: 2000;   /* ensure navbar (hamburger + links) stays above hero video */
 }
 
 /* ========= Container ========= */
@@ -42,8 +45,10 @@ body.nav-open {
   height: 100%;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1rem;   /* keeps space left/right */
+  width: 100%;       /* ✅ makes sure hamburger isn’t cut off */
 }
+
 
 /* ========= Logo Button ========= */
 .navbar-logo {
@@ -67,12 +72,17 @@ body.nav-open {
 
 /* ========= Navigation Links ========= */
 .navbar-links {
+  top: var(--nav-height);
+  left: 0;
+  right:0;
+  
+
   display: flex;
   align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .navbar-links li {
@@ -342,6 +352,10 @@ body.nav-open {
   cursor: pointer;
   transition: var(--transition);
   padding: 0;
+
+  /* ✅ ensure it's always visible */
+  margin-right: 10px;   /* add breathing room from right edge */
+  z-index: 2001;        /* above video + hero */
 }
 
 .menu-toggle span {
