@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="hero-content">
         <h1>Powering the Future with Right Power Cables</h1>
         <p>High-quality cables for every industry need</p>
-        <button className="btn-hero">Explore More RPC</button>
+        <button className="btn-hero">Explore More</button>
       </div>
     </section>
   );
