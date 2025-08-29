@@ -83,7 +83,7 @@ const Contact = () => {
                     />
                   </svg>
                 </span>
-                <a href="mailto:arbusiness1909@gmail.com">arbusiness1909@gmail.com</a>
+                <a href="mailto:rightpowercables@gmail.com">rightpowercables@gmail.com</a>
               </li>
               <li>
                 <span className="icon" aria-hidden>
@@ -94,7 +94,7 @@ const Contact = () => {
                     />
                   </svg>
                 </span>
-                <a href="tel:+911234567890">+91 123-456-7890</a>
+                <a href="tel:+91 9828173190">+91 9828173190</a>
               </li>
               <li>
                 <span className="icon" aria-hidden>

@@ -12,7 +12,12 @@ const WhyChooseUs = () => {
           <li className="why-item">
             <div className="why-icon">🏅</div>
             <h3>ISI & ISO Certified</h3>
-            <p>All cables comply with ISI & ISO safety and quality standards.</p>
+            <p>
+              All our products strictly comply with <strong>ISI & ISO safety
+              and quality standards</strong>, ensuring reliability and customer
+              confidence. Each cable is tested under stringent conditions before
+              it reaches the market.
+            </p>
             <a
               href={isoCert}
               target="_blank"
@@ -26,19 +31,34 @@ const WhyChooseUs = () => {
           <li className="why-item">
             <div className="why-icon">🛡️</div>
             <h3>Durable & Safe Materials</h3>
-            <p>High-grade PVC, XLPE and copper/aluminum for long-term reliability.</p>
+            <p>
+              Manufactured with <strong>high-grade PVC, XLPE, and pure
+              copper/aluminum</strong>, our cables guarantee durability, safety,
+              and long service life. Designed to withstand extreme conditions
+              while delivering consistent performance.
+            </p>
           </li>
 
           <li className="why-item">
             <div className="why-icon">🚚</div>
             <h3>Nationwide Delivery</h3>
-            <p>Pan-India supply with on-time, secured logistics.</p>
+            <p>
+              With a robust <strong>Pan-India logistics network</strong>, we
+              ensure timely supply to every corner of the country. Our secured
+              transportation guarantees safe handling and quick turnaround for
+              urgent project needs.
+            </p>
           </li>
 
           <li className="why-item">
             <div className="why-icon">₹</div>
             <h3>Competitive Pricing</h3>
-            <p>Premium quality at affordable rates to fit every budget.</p>
+            <p>
+              Offering <strong>premium quality at affordable rates</strong>, we
+              provide cost-effective solutions without compromising safety or
+              reliability. Our pricing structure is designed to fit projects of
+              every scale, from industries to infrastructure.
+            </p>
           </li>
         </ul>
       </div>

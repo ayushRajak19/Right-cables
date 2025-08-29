@@ -1,8 +1,15 @@
 import React from "react";
-import bgVideo from "../../assets/hero-bg.mp4"; // ✅ ensure correct path
+import bgVideo from "../../assets/hero-bg.mp4"; 
 import "./Hero.css";
 
 const Hero = () => {
+  const scrollToSection = () => {
+    const section = document.getElementById("about-company"); // 👈 change this ID to your target section
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="hero">
       {/* Background Video */}
@@ -22,7 +29,9 @@ const Hero = () => {
       <div className="hero-content">
         <h1>Powering the Future with Right Power Cables</h1>
         <p>High-quality cables for every industry need</p>
-        <button className="btn-hero">Explore More</button>
+        <button className="btn-hero" onClick={scrollToSection}>
+          Explore More
+        </button>
       </div>
     </section>
   );

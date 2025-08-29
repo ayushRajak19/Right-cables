@@ -1,24 +1,33 @@
 import React, { useEffect, useRef, useCallback } from "react";
 import "./About.css";
 
-const CATALOG_URL = "/catalog.pdf";
+const CATALOG_URL = `${import.meta.env.BASE_URL}catalog.pdf`;
 
 /* Inline icons */
 const MissionIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor" />
+    <path
+      d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"
+      fill="currentColor"
+    />
   </svg>
 );
 
 const VisionIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" fill="currentColor" />
+    <path
+      d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z"
+      fill="currentColor"
+    />
   </svg>
 );
 
 const WhyChooseIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" />
+    <path
+      d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+      fill="currentColor"
+    />
   </svg>
 );
 
@@ -29,7 +38,9 @@ const About = () => {
     if (observerRef.current) observerRef.current.disconnect();
 
     const elements = document.querySelectorAll("[data-reveal]");
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
     if (prefersReducedMotion) {
       elements.forEach((el) => el.classList.add("in"));
@@ -137,12 +148,15 @@ const About = () => {
           </article>
         </div>
 
+        {/* ✅ Fixed Catalogue Button */}
         <div className="catalog-cta" data-reveal="y">
           <h3 className="catalog-text">For more information</h3>
           <a
             className="btn-download"
             href={CATALOG_URL}
             download
+            target="_blank"
+            rel="noopener noreferrer"
             aria-label="Download company catalogue PDF"
           >
             📕 Download Catalogue

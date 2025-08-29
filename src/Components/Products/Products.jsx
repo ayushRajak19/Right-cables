@@ -247,7 +247,7 @@ const ProductCard = ({ product, index }) => {
     >
       <div className="products__card-image-wrapper">
         <div className="products__card-category">{product.category}</div>
-        <div className="products__card-voltage">{product.voltage}</div>
+        {/* REMOVED: <div className="products__card-voltage">{product.voltage}</div> */}
 
         {!imageError ? (
           <img

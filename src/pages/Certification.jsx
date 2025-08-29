@@ -31,11 +31,11 @@ const Certification = () => {
     },
   ];
 
+  // ✅ Removed the "15+ Years Experience" stat
   const stats = [
     { number: "6+", label: "Major Certifications" },
-    { number: "15+", label: "Years Experience" },
     { number: "100%", label: "Compliance Rate" },
-    { number: "50+", label: "Countries Served" },
+    { number: "India", label: "National Presence" }, // ✅ updated here
   ];
 
   return (
