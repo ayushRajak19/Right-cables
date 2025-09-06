@@ -1,0 +1,253 @@
+import React from "react";
+import { Link } from "react-router-dom";
+import certifications from "../../assets/certifications.png";
+
+
+const Footer = () => {
+  return (
+    <footer className="bg-[#0a0c18] text-gray-300 border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+        {/* Mobile-First Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 lg:gap-10">
+          {/* Column 1: Social + Certifications */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h4 className="text-lg font-bold mb-4 text-white">Follow Us</h4>
+            <div className="flex gap-3 mb-6 flex-wrap">
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/mukesh-kumar-229696351"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-blue-600 transition-colors duration-300"
+                aria-label="Follow us on LinkedIn"
+              >
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+                  <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM4 9h2.99v12H4zM9.5 9H12v1.8h.04c.35-.66 1.22-1.36 2.51-1.36 2.69 0 3.19 1.77 3.19 4.07V21H14.7v-5.35c0-1.28-.03-2.93-1.79-2.93-1.79 0-2.06 1.4-2.06 2.84V21H9.5z" />
+                </svg>
+              </a>
+
+              {/* YouTube */}
+              <a
+                href="https://www.youtube.com/channel/UCLEjRKykdwlyys-cAvQ0aeA"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-red-600 transition-colors duration-300"
+                aria-label="Subscribe to our YouTube channel"
+              >
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+                  <path d="M23.5 6.2a2.9 2.9 0 0 0-2-2C19.5 4 12 4 12 4s-7.5 0-9.5.2a2.9 2.9 0 0 0-2 2A30.2 30.2 0 0 0 0 12a30.2 30.2 0 0 0 .5 5.8 2.9 2.9 0 0 0 2 2C4.5 20 12 20 12 20s7.5 0 9.5-.2a2.9 2.9 0 0 0 2-2A30.2 30.2 0 0 0 24 12a30.2 30.2 0 0 0-.5-5.8zM9.8 15.5v-7l6.2 3.5-6.2 3.5z" />
+                </svg>
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/rightpowercables?igsh=MThzMTA1dHhhcjRsZA%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-pink-600 transition-colors duration-300"
+                aria-label="Follow us on Instagram"
+              >
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+                  <path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9A5.5 5.5 0 0 1 16.5 22h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9zm4.5 3a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.8-.7a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z" />
+                </svg>
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/profile.php?id=61580293435721"
+                target="_blank"
+                rel="noreferrer"
+                className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 hover:bg-blue-500 transition-colors duration-300"
+                aria-label="Follow us on Facebook"
+              >
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-white">
+                  <path d="M22.675 0h-21.35C.597 0 0 .6 0 1.326v21.348C0 23.4.597 24 1.325 24h11.495v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24h-1.918c-1.504 0-1.795.715-1.795 1.764v2.314h3.587l-.467 3.622h-3.12V24h6.116C23.403 24 24 23.4 24 22.674V1.326C24 .6 23.403 0 22.675 0" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Certifications */}
+            <div>
+              <h4 className="text-lg sm:text-xl font-bold mb-4 text-white">
+                Certifications
+              </h4>
+              <div className="flex justify-center sm:justify-start">
+                <img
+                  src={certifications}
+                  alt="Company Certifications"
+                  className="w-48 sm:w-56 lg:w-64 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Column 2: About Company */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h4 className="text-lg font-bold mb-4 text-white">About Company</h4>
+            <p className="text-gray-400 leading-relaxed text-sm sm:text-base">
+              Right Power Cables Pvt. Ltd. is a trusted manufacturer of premium
+              quality wires and cables, catering to utilities, industries, and
+              infrastructure projects across India. With strong R&D and
+              nationwide distribution, we deliver safety, durability, and
+              innovation.
+            </p>
+          </div>
+
+          {/* Column 3: Contact Info */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <h4 className="text-lg font-bold mb-4 text-white">
+              Registered Office
+            </h4>
+            {/* Address */}
+            <div className="mb-4">
+              <div className="flex items-start gap-2 mb-3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-4 h-4 text-red-500 flex-shrink-0 mt-1"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M12 2C8.14 2 5 5.14 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.86-3.14-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" />
+                </svg>
+                <p className="text-gray-400 leading-relaxed text-sm">
+                  Khasra No. 126, Jahota Road, Near Tatiyawas Toll Plaza,
+                  Rampura Dabri, Jaipur (Raj.) 303704
+                </p>
+              </div>
+            </div>
+            {/* Phone & Email */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <svg
+                  className="w-4 h-4 text-green-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
+                <a
+                  href="tel:+919828173190"
+                  className="text-blue-400 hover:text-blue-300 text-sm"
+                >
+                  +91 98281 73190
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <svg
+                  className="w-4 h-4 text-blue-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                <a
+                  href="mailto:rightpowercables@gmail.com"
+                  className="text-blue-400 hover:text-blue-300 text-sm break-all"
+                >
+                  rightpowercables@gmail.com
+                  
+                </a>
+                
+              </div>
+                      <div className="flex items-center gap-2">
+                <svg
+                  className="w-4 h-4 text-blue-500 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                <a
+                  href="mailto:Info@rightpowercables.com"
+                  className="text-blue-400 hover:text-blue-300 text-sm break-all"
+                >
+
+                  Info@rightpowercables.com
+                </a>
+                
+              </div>
+            </div>
+          </div>
+
+          {/* Column 4: Quick Links */}
+          <div className="sm:col-span-1 lg:col-span-1">
+            <h4 className="text-lg font-bold mb-4 text-white">Quick Links</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="#about-company"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/manufacturing"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  Manufacturing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/catalogue"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  Catalogue
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/Culture"
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
+                >
+                  Career
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 5: Map Location */}
+          <div className="sm:col-span-2 lg:col-span-1 xl:col-span-1">
+            <h4 className="text-lg font-bold mb-4 text-white">Our Location</h4>
+            <div className="relative w-full h-48 sm:h-56 lg:h-48">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3551.701726228416!2d75.7246665754461!3d27.10269927653452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDA2JzA5LjciTiA3NcKwNDMnMzguMSJF!5e0!3m2!1sen!2sin!4v1756825298516!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                allowFullScreen=""
+                loading="lazy"
+                className="rounded-lg border border-white/10 w-full h-full"
+                title="Right Power Cables Location"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Copyright Strip */}
+      <div className="text-center py-4 sm:py-6 text-gray-500 border-t border-white/10 text-xs sm:text-sm px-4">
+        © 2025 Right Power Cables Pvt. Ltd. All Rights Reserved.
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

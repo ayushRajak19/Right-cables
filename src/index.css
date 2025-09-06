@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────────────── Navbar micro-classes (inside @layer so JIT keeps them) ───────────────── */
+@layer components {
+  /* white link + red underline grow */
+  .nav-link {
+    @apply relative text-white/95 font-semibold text-[20px] px-3 py-2 rounded-md transition;
+  }
+  .nav-link::after {
+    content: "";
+    @apply absolute left-3 right-3 bottom-1 h-0.5 bg-[#f44336] origin-center;
+    transform: scaleX(0);
+    transition: transform .2s ease;
+  }
+  .nav-link:hover::after { transform: scaleX(1); }
+
+  /* glass dropdown panel */
+  .dropdown-panel {
+    @apply absolute left-0 top-full mt-3 w-72 z-50
+           rounded-xl bg-white/95 backdrop-blur-xl
+           shadow-[0_10px_30px_rgba(0,0,0,0.25)]
+           ring-1 ring-black/10 p-2 transform transition
+           will-change-transform;
+  }
+
+  /* dropdown items */
+  .dropdown-item {
+    @apply w-full text-left text-slate-700 px-3 py-2 rounded-lg hover:bg-slate-100;
+  }
+  .dropdown-item:hover { @apply bg-[#f44336] text-white; }
+
+  /* red pill button */
+  .pill-btn {
+    @apply inline-flex items-center px-6 py-2 rounded-full
+           font-semibold text-white bg-[#f44336] hover:bg-[#e53935]
+           shadow-[0_8px_20px_rgba(244,67,54,0.25)]
+           ring-1 ring-white/10;
+  }
+
+  /* optional CTA button */
+  .btn-cta {
+    @apply bg-[#f44336] hover:bg-[#e53935] text-white font-semibold text-[18px]
+           rounded-full px-6 py-3 transition
+           shadow-[0_6px_16px_rgba(244,67,54,0.3)]
+           hover:shadow-[0_8px_20px_rgba(244,67,54,0.4)];
+  }
+
+  /* hamburger */
+  .hamburger { @apply flex flex-col justify-center items-center w-11 h-11 bg-black/30 border border-white/30 rounded-lg transition mr-2; }
+  .hamburger-bar { @apply w-[22px] h-[2px] bg-white rounded-sm transition; }
+
+  /* hero offset ≈ navbar height */
+  .hero-offset { @apply -mt-[70px] pt-[70px]; }
+}
+
+/* ───────────────── Global styles / perf-friendly defaults ───────────────── */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: 100%;
+  height: 100%;
+  background: #0a0c18;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px system-ui, Arial, sans-serif;
+  color: #f8fafc;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  background: transparent;
+}
+
+#root { height: 100%; min-height: 100vh; background: transparent; }
+
+body.nav-open { overflow: hidden; position: fixed; width: 100%; top: 0; }
+
+* { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+
+h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea {
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+
+img, video { max-width: 100%; height: auto; display: block; }
+
+section { scroll-margin-top: 80px; background: transparent; }
+
+.gpu-accelerate { will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
+.gpu-accelerate.animation-complete { will-change: auto; }
+
+@media (max-width: 768px) {
+  html { -webkit-text-size-adjust: 100%; touch-action: pan-y pinch-zoom; }
+  body { overscroll-behavior-y: contain; }
+  .scrollable { scroll-behavior: smooth; -webkit-overflow-scrolling: touch; }
+}
+
+button, a, [role="button"], [tabindex] { touch-action: manipulation; cursor: pointer; }
+
+*:focus { outline: 2px solid #3b82f6; outline-offset: 2px; }
+*:focus:not(:focus-visible) { outline: none; }
+
+.prevent-layout-shift { contain: layout style paint; }
+
+.scroll-container {
+  overflow-y: auto; overflow-x: hidden;
+  -webkit-overflow-scrolling: touch; overscroll-behavior: contain;
+  scroll-behavior: smooth;
+}
+
+.loading { opacity: 0; transition: opacity 0.2s ease-in-out; }
+.loaded  { opacity: 1; }
